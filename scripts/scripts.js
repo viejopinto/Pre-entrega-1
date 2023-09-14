@@ -7,8 +7,7 @@ alert("Presiona ok para continuar")
 // --Declaración de Variables
 let descuento = 0
 let totalPago = 0
-
-let respuestaUsuario = prompt("¿Quieres usar el buscador de descuentazos?"); // SI - NO
+let respuestaUsuario = prompt("¿Quieres usar el buscador de descuentazos?")
 while (respuestaUsuario.trim().toUpperCase() === "SI") {
     let numId = parseInt(prompt("Ingresa tu número de identificación"))
     let cat1 = prompt("Ingresa la categoría, solo puede ser Ropa, Videojuegos o Mascotas")
@@ -23,10 +22,11 @@ while (respuestaUsuario.trim().toUpperCase() === "SI") {
 
     else if (cuantoGasta >= 15000) {
         let montoExacto = parseFloat(prompt("Muy bien, ahora dinos cuánto exactamente vas a gastar, recuerda que tiene que ser 15,000 o más"))
-        totalPago = montoExacto - (montoExacto * descuento)
+        descuento = montoExacto * 0.25
+        totalPago = montoExacto - descuento
         alert ("El total a pagar es de " + totalPago)
     }
-    respuestaUsuario = prompt("¿Quieres usar el buscador de descuentazos?"); // SI - NO
+    respuestaUsuario = prompt("¿Quieres usar el buscador de descuentazos?")
 }
 
 alert("Gracias")
